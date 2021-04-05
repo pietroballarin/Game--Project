@@ -1,12 +1,13 @@
 class Player {
 
     constructor() {
-        this.x = 30;
-        this.y = 210;
+        this.x = 210;
+        this.y = 480;
     }
 
     draw() {
-        image(this.carImg, this.x, this.y, 160, 80);
+        image(this.carImg, this.x, this.y, 80, 160);
+        this.x = constrain(this.x, 100, 420)
     }
 
     preload() {
@@ -14,21 +15,20 @@ class Player {
     }
 
     keyPressed(keycode) {
-        if (keycode == LEFT_ARROW)
-        this.y -= 100;
         
-
+        if (keycode == LEFT_ARROW)
+        this.x -= 30;
+        
         if (keycode == RIGHT_ARROW)
-        this.y += 100;
+        this.x += 30;
 
         if (keycode == UP_ARROW)
-        this.x += 100
+        this.y -= 100
 
         if (keycode == DOWN_ARROW)
-        this.x -= 100
-
-        console.log(this.y)
+        this.y += 100
     }
 
 
 }
+

@@ -3,24 +3,19 @@ class Background {
     constructor() {
         this.x = 0;
         this.y = 0;
-        this.x2 = width;
-        this.speed = 20
+        this.speed = 5;
     }
 
     draw() { 
-        image(this.roadImg, this.x, this.y, width, height);
-        image(this.roadImg, this.x2, this.y, width, height);
-
-        this.x -= this.speed
-        this.x2 -= this.speed
-
-        if (this.x < -width+10){
-            this.x = width;
-          }
-          if (this.x2 < -width+10){
-            this.x2 = width;
-          }
         
+        image(this.roadImg, this.x, this.y, width, height);
+        image(this.roadImg, this.x, this.y-height, width, height);
+        
+        this.y += this.speed
+        
+        if (this.y >= height){
+            this.y = 0
+          }    
     }
 
     preload() {
