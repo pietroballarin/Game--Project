@@ -4,15 +4,19 @@ class Player {
         this.x = 210;
         this.y = 480;
     }
-
-    draw() {
-        image(this.carImg, this.x, this.y, 80, 160);
-        this.x = constrain(this.x, 100, 420)
-    }
-
     preload() {
         this.carImg = loadImage('/resources/player/car.png')
     }
+
+    draw() {
+        
+        image(this.carImg, this.x, this.y, 60, 120);
+        this.x = constrain(this.x, 100, 420)
+
+        
+    
+    }
+
 
     keyPressed(keycode) {
         
