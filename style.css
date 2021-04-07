@@ -7,6 +7,54 @@ body {
     background-color: green;
   }
 
-#startbtn {
-  
+
+#timer {
+  margin: 20px;
+  padding: 10px;
+  border: 1px solid white;
+  background-color: red;
+  color: white;
+}
+
+#winmsg { 
+  border: solid 1px black;
+  background-color: red;
+  color: white;
+  font-size: large;
+  font-weight: 900;
+  text-align: center;
+  height: 80px;
+  width: 400px;
+  background-position: center;
+}
+
+#gameover-msg { 
+  border: solid 1px black;
+  background-color: red;
+  color: white;
+  font-size: large;
+  font-weight: 900;
+  text-align: center;
+  height: 80px;
+  width: 400px;
+  background-position: center;
+}
+
+#restart {
+  border: solid 1px black;
+  background-color: red;
+  color: white;
+  font-size: large;
+  font-weight: 900;
+  text-align: center;
+}
+
+.hidden {
+  display: none;
+}
+
+.canvas {
+border: 10px solid black;
+width: 400px;
+height: 650px;
 }

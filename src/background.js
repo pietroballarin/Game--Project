@@ -10,11 +10,9 @@ class Background {
         
         image(this.roadImg, this.x, this.y, width, height);
         image(this.roadImg, this.x, this.y-height, width, height);
-        
-        this.y += this.speed
-        
+        this.y += this.speed;
         if (this.y >= height){
-            this.y = 0
+            this.y = 0;
           } 
     }
 

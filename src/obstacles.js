@@ -4,12 +4,13 @@ class Obstacle {
 
     constructor(x, y, speed, image) {
 
-        this.x = x
+        this.x = x;
         this.y = y;
-        this.speed = speed
-        this.image = image
-        this.width = 60
-        this.height = 120
+        this.speed = speed;
+        this.image = image;
+        this.width = 60;
+        this.height = 120;
+        this.gameover = false;
     }
 
     draw() {
@@ -23,10 +24,12 @@ class Obstacle {
         let obstacleY = this.y + this.height;
         let playerX = player.x + player.width;
         let playerY = player.y + player.height;
-        if (dist(obstacleX, obstacleY, playerX, playerY) < 40) {
+        if (dist(playerY, playerX, obstacleY, obstacleX) < 35) {
         alert("GAME OVER");
         document.location.reload();
         clearInterval(interval);
+        displayGameOver()
+        hideCounter()
         } else {
             return false;
         } 

@@ -23,12 +23,6 @@ class Player {
         
         if (keycode == RIGHT_ARROW)
         this.x += 25;
-
-        // if (keycode == UP_ARROW)
-        // this.y -= 100
-
-        // if (keycode == DOWN_ARROW)
-        // this.y += 100
     }
 }
 
