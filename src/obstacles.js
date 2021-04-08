@@ -23,8 +23,8 @@ class Obstacle {
         if (dist(playerY, playerX, obstacleY, obstacleX) < 45) {
         displayGameOver();
         hideCounter();
-        hideCanvas(); 
-        if (counter >= 0) counter++;
+        hideCanvas();
+        counter +=10;
         } else {
             return false;
         } 

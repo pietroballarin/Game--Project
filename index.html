@@ -12,21 +12,26 @@
   <body>
     <h1>AUTOBAHN TURBO MANIAC</h1>
     <div id="winmsg" class="hidden">
-    <h2>YOU WON!</h2>
+      <h2>YOU WON!</h2>
     </div>
     <div id="gameover-msg" class="hidden">
       <h2>GAME OVER</h2>
     </div>
-    <div id="canvas">
+    <div id="canvas"></div> 
+    <div id="timer"></div>
+    <div>
+      <button id="start" >START</button>
+    </div>
+    <div>
+      <button onClick="window.location.reload()" id="reset">RESET</button>
+    </div>
+    <!-- </div>
+      <button id="hard">Hard</button>
+    </div> -->
     <script src="./src/background.js"></script>
     <script src="./src/player.js"></script>
     <script src="./src/obstacles.js"></script >
     <script src="./src/game.js"></script>
-    <script src="./src/main.js"></script> 
-    </div> 
-    <div id="timer"></div>
-    <div>
-      <button onClick="window.location.reload();" id="restart">RESTART</button>
-    </div>
+    <script src="./src/main.js"></script>
   </body>
 </html>

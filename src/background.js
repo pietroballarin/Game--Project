@@ -3,7 +3,7 @@ class Background {
     constructor() {
         this.x = 0;
         this.y = 0;
-        this.speed = 8;
+        this.speed = 13;
     }
 
     draw() { 
