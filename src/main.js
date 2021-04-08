@@ -5,7 +5,7 @@ let player = new Player();
 let game = new Game();
 let obstacle = new Obstacle();
 let timer;
-let counter = 3;
+let counter = 60;
 let seconds, minutes;
 // let song;
 
@@ -46,7 +46,6 @@ function timeIt(interval) {
     }
     if (counter <= 0) hideCounter();
     if (counter <= 0) hideCanvas();
-    if (counter <= 0) hideGameOver();
 }
 
 function displayWin() {
