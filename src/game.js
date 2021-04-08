@@ -8,10 +8,10 @@ class Game {
     }
     
     preload() {
-        this.imgObst1 = loadImage('resources/obstacles/obst1.png');
-        this.imgObst2 = loadImage('resources/obstacles/obst2.png');
-        this.imgObst3 = loadImage('resources/obstacles/obst3.png');
-        this.imgObst4 = loadImage('resources/obstacles/obst4.png'); 
+        this.imgObst1 = loadImage('./resources/obstacles/obst1.png');
+        this.imgObst2 = loadImage('./resources/obstacles/obst2.png');
+        this.imgObst3 = loadImage('./resources/obstacles/obst3.png');
+        this.imgObst4 = loadImage('./resources/obstacles/obst4.png'); 
     }
 
     draw(player) {
