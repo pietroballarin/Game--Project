@@ -7,7 +7,6 @@ class Obstacle {
         this.image = image;
         this.width = 60;
         this.height = 120;
-        this.gameover = false;
     }
 
     draw() {
@@ -22,12 +21,10 @@ class Obstacle {
         let playerX = player.x + player.width;
         let playerY = player.y + player.height;
         if (dist(playerY, playerX, obstacleY, obstacleX) < 45) {
-        // alert("GAME OVER");
-        // document.location.reload();
-        // clearInterval(interval);
         displayGameOver();
         hideCounter();
-        hideCanvas();
+        hideCanvas(); 
+        if (counter >= 0) counter++;
         } else {
             return false;
         } 

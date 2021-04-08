@@ -5,15 +5,16 @@ let player = new Player();
 let game = new Game();
 let obstacle = new Obstacle();
 let timer;
-let counter = 60;
+let counter = 90;
 let seconds, minutes;
+
 // let song;
 
 function preload() {
     player.preload();
     background.preload();
     game.preload();
-    // song = loadSound('resources/music/music.mp3');  
+ // song = loadSound('resources/music/music.mp3');  
 }
 
 function setup() {
@@ -28,13 +29,17 @@ function draw() {
     background.draw();
     player.draw();
     game.draw(player);
+    if (counter <= 0) {
+        noLoop();
+    }
 }
 
 function keyPressed() {
     player.keyPressed(keyCode); 
 }
 
-function timeIt(interval) {
+
+function timeIt() {
     if (counter <= 2000) {
       counter--;
     }
@@ -67,4 +72,3 @@ function hideCanvas() {
     const displayHidden = document.querySelector('#canvas');
     displayHidden.classList.add('hidden');
 }
-
