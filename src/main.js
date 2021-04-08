@@ -5,7 +5,7 @@ let player = new Player();
 let game = new Game();
 let obstacle = new Obstacle();
 let timer;
-let counter = 60;
+let counter = 3;
 let seconds, minutes;
 // let song;
 
@@ -13,7 +13,7 @@ function preload() {
     player.preload();
     background.preload();
     game.preload();
-    // song = loadSound('/resources/music/music.mp3');  
+    // song = loadSound('resources/music/music.mp3');  
 }
 
 function setup() {
@@ -42,12 +42,12 @@ function timeIt(interval) {
     seconds = counter % 60;
     document.querySelector('#timer').innerText = minutes + ":" + seconds;
     if (counter <= 0) {
-        alert('YOU WON!');
-        document.location.reload();
-        clearInterval(interval); 
-        } else return false;
-    if (counter <= 0) displayWin();
+        displayWin();
+    }
     if (counter <= 0) hideCounter();
+    if (counter <= 0) hideCanvas();
+    if (counter <= 0) hideGameOver();
+    if (counter <= 0) detectCollision(player) === false;
 }
 
 function displayWin() {
@@ -55,7 +55,7 @@ function displayWin() {
     winmsg.classList.remove('hidden');
 }
 
-function displayGameOver(obstacles) {
+function displayGameOver() {
     const gameoverMsg = document.querySelector('#gameover-msg');
     gameoverMsg.classList.remove('hidden');
 }
@@ -64,3 +64,9 @@ function hideCounter() {
     const counterDisplay = document.querySelector('#timer');
     counterDisplay.classList.add('hidden');
 }
+
+function hideCanvas() {
+    const displayHidden = document.querySelector('#canvas');
+    displayHidden.classList.add('hidden');
+}
+

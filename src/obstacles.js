@@ -22,11 +22,12 @@ class Obstacle {
         let playerX = player.x + player.width;
         let playerY = player.y + player.height;
         if (dist(playerY, playerX, obstacleY, obstacleX) < 45) {
-        alert("GAME OVER");
-        document.location.reload();
-        clearInterval(interval);
+        // alert("GAME OVER");
+        // document.location.reload();
+        // clearInterval(interval);
         displayGameOver();
         hideCounter();
+        hideCanvas();
         } else {
             return false;
         } 

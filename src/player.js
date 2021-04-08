@@ -8,7 +8,7 @@ class Player {
     }
 
     preload() {
-        this.carImg = loadImage('/resources/player/car.png');
+        this.carImg = loadImage('resources/player/car.png');
     }
 
     draw() {

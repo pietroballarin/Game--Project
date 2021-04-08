@@ -16,6 +16,6 @@ class Background {
     }
 
     preload() {
-        this.roadImg = loadImage('/resources/background/background-1.png');
+        this.roadImg = loadImage('resources/background/background-1.png');
     }  
 }
