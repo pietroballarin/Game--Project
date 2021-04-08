@@ -47,7 +47,6 @@ function timeIt(interval) {
     if (counter <= 0) hideCounter();
     if (counter <= 0) hideCanvas();
     if (counter <= 0) hideGameOver();
-    if (counter <= 0) detectCollision(player) === false;
 }
 
 function displayWin() {
